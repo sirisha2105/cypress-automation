@@ -1,0 +1,6 @@
+{
+  "include": [
+    "cypress/e2e/.gitignore/node_modules/cypress", 
+    "cypress/**/*.js"
+  ]
+}
