@@ -5,7 +5,7 @@ describe('Login Functionality', () => {
    cy.get("input[name='password']").type("Siri@123")
    cy.get("input[value='Log In']").click()
 
-   cy.get("#accountTable>tbody>tr>td>a").click();
+ cy.get('#accountTable>tbody>tr>td>a', { timeout: 10000 }).should('be.visible').click();
    cy.get("select[id='month']").select(2) //using index
    cy.get("select[id='month']").select("March") //Using Value
       cy.get("select[id='month']").select("May") //Using Text

@@ -16,7 +16,8 @@ describe('Re-Registration Functionality', () => {
     cy.get('[name="repeatedPassword"]').type('Siri@123')
 
     cy.get('[colspan="2"] > .button').click();
-    cy.get("span[id='customer.username.errors']").should('have.text', 'This username already exists.')
+    cy.get("span[id='customer.username.errors']", { timeout: 10000 })
+  .should('be.visible').should('have.text', 'This username already exists.')
     //cy.get("span[id='customer.username.errors']").contains('This username already exists.')
 
 

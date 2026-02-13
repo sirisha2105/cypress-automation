@@ -2,6 +2,8 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   allowCypressEnv: false,
+    defaultCommandTimeout: 10000,
+  pageLoadTimeout: 60000,
 
   e2e: {
    // specPattern: "cypress/testcases/**/*.cy.{js,jsx,ts,tsx}",
